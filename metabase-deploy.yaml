@@ -21,6 +21,11 @@ spec:
       containers: 
         - 
           image: metabase/metabase:latest
+          resources:
+            requests:
+              memory: "500Mi"           
+            limits:
+              memory: "2Gi"
           imagePullPolicy: IfNotPresent
           name: metabase
           ports: 
@@ -45,4 +50,5 @@ spec:
                   name: mbpass
                   key: MB_DB_PASS
             - name: MB_DB_HOST
-              value: postgres
+              value: postgres             
+            

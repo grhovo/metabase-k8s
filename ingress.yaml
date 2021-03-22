@@ -13,6 +13,6 @@
          pathType: Prefix
          backend:
            service: 
-            name: metadata-svc
+            name: metabase
             port: 
               number: 3000

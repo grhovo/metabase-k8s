@@ -18,11 +18,16 @@ spec:
       labels: 
         app: postgres
     spec: 
+      volumes:
+        -
+          name: postgres-storage
+          persistentVolumeClaim:
+            claimName: postgres-db
       containers: 
         - 
           image: postgres:latest
           imagePullPolicy: IfNotPresent
-          name: postgres
+          name: postgres-secrets
           ports: 
             - 
               containerPort: 3000
