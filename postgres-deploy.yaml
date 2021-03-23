@@ -27,7 +27,7 @@ spec:
         - 
           image: postgres:latest
           imagePullPolicy: IfNotPresent
-          name: postgres-secrets
+          name: postgres
           ports: 
             - 
               containerPort: 3000
